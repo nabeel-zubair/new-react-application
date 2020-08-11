@@ -20,8 +20,12 @@ module.exports = {
                 }
             },
             {
-                test: /\.s[ac]ss$/i,
+                test: /\.s[ac]ss|css$/,
                 use: ["style-loader", "css-loader", "sass-loader"]
+            },
+            {
+                test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+                use: ["url-loader"]
             }
         ]
     },
